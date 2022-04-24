@@ -77,7 +77,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                 is Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
-                        Toast.makeText(activity, "An error occured: $message", Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "Too Many results : $message", Toast.LENGTH_LONG).show()
                     }
                 }
                 is Resource.Loading -> {
